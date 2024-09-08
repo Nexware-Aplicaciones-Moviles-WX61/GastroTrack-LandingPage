@@ -166,15 +166,99 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
-  #video-about-product{
-    padding: 10px;
-    text-align: center;
-  }
 
-  #video-about-team{
-    padding: 10px;
-    text-align: center;
-  }
+  /* About Us */
+#aboutus {
+  background-color: #66A18A;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.about-us-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 10%;
+}
+
+.about-us-item {
+  width: 22%;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.about-us-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.about-us-item p {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Contact Us */
+#contactus {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.contact-form {
+  width: 40%;
+  background-color: #66A18A;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-form h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #ccc;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-image {
+  margin-left: 50px;
+}
+
+.contact-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
 
   /*Footer*/
 
