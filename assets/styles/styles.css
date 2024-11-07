@@ -2,289 +2,330 @@ body {
     font-family: Nunito, sans-serif;
     margin: 0;
     padding: 0;
-    
 }
 
 .navbar {
-    display:flex;
-    width: 100%;
-    height: 160px;
-    justify-content: space-between;
+    display: flex;
+    height: 250px; /* Reducir un poco la altura del navbar */
+    justify-content: center;
     align-items: center;
+    padding: 0 20px;
     background-color: white;
-
-    >div {
-        margin-right: 10px;
-    }
-    > div button{
-      background-color: #66A18A;
-      color: white;
-      border: none;
-      padding: 10px;
-      font-size: 12;
-      font-weight: 500; /*Medium*/
-      border-radius: 4px;
-    }
-    
 }
+
+.navbar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar img {
+    height: 230px; /* Tamaño reducido del logo */
+    margin-left: 800px;
+    margin-right: auto;
+}
+
 .navbar ul {
     display: flex;
     list-style-type: none;
     gap: 10px;
-    align-items: flex-end;
+    align-items: center;
     margin-left: auto;
-}
-.navbar img {
-  margin-top: 9px;
-  margin-left: 10px;
-  height: 140px; /* Aumenta la altura de la imagen del logo */
-  width: 140px; /* Aumenta el ancho de la imagen del logo */
 }
 
 .navbar ul li {
-    padding: 8px;   
+    padding: 10px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
 }
 
 .navbar a {
-    display: block;
-    color: black;
+    color: #333;
     text-decoration: none;
-    padding-right: 8px;
-    font-size: 15px;
-    font-weight: 500; /*Medium*/
-
- 
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: none;
 }
+.navbar a:hover {
+    background-color: #66A18A;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(102, 161, 138, 0.5);
+}
+
+.navbar a.cta{
+    background-color: #ebb755;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(102, 161, 138, 0.5);
+}
+
+.navbar a.cta:hover {
+    background-color: #d49b42; /* Color más oscuro al hacer hover */
+    transform: scale(1.05); /* Agrandar un poco el botón */
+    box-shadow: 0px 6px 12px rgba(102, 161, 138, 0.6);
+}
+
 .navbar ul li:hover {
     background-color: #d1d1d1;
-    
+    box-shadow: 0px 4px 8px rgba(102, 161, 138, 0.5);
 }
 
+.language-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.language-buttons button {
+    background-color: #66A18A;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(102, 161, 138, 0.5);
+}
+
+.language-buttons button:hover{
+    background-color: #5c8d74;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(102, 161, 138, 0.6);
+}
+
+/* Hero Section */
 .hero {
     background-image: url("https://github.com/FoodOs-Upc/FoodOs-LandingPage/blob/main/assets/img/haccp-101_1657038906%201.png?raw=true");
-    background-size: cover; 
+    background-size: cover;
+    background-position: center; /* Centrar la imagen de fondo */
     width: 100%;
     height: 920px;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end ;
-    >p{
-        color: white;
-        font-size: 80px;
-        margin-right: 70px;
-    }
-    
+    align-items: flex-end;
 }
 
-.btn-star{
-    background-color:#ebb755;
-    height:69px;
-    width:221px;
+.hero > p {
+    color: white;
+    font-size: 80px;
+    margin-right: 70px;
+}
+
+.btn-star {
+    background-color: #ebb755;
+    height: 69px;
+    width: 221px;
     font-size: 30px;
     color: white;
-    border-radius:16px;
-    filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+    border-radius: 16px;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
 }
 
+/* Section Titles */
 .section-title {
     font-size: 50px;
     margin-bottom: 30px;
-    color:#66A18A;
-  }
+    color: #66A18A;
+}
 
-  #service {
+/* Services Section */
+#service {
     text-align: center;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    
-  }
-  .row {
-    
+}
+
+.row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  .column1, .column2, .column3 {
+}
+
+.column1, .column2, .column3 {
     background-color: #66A18A;
     padding: 30px;
     margin: 10px;
     flex: 1;
-    border-radius:8px;
-    p > {
-        font-size: 18px;}
-  }
+    border-radius: 8px;
+}
 
-  .service-img {
+.column1 p, .column2 p, .column3 p {
+    font-size: 18px;
+}
+
+.service-img {
     width: 180px;
     height: auto;
-    
-  }
+}
 
-  /*Membership*/
-
-  #membership{
+/* Membership Section */
+#membership {
     text-align: center;
     padding: 50px;
-  }
-  
-  .plan-cards {
+}
+
+.plan-cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-  }
-  
-  .plan-card {
+}
+
+.plan-card {
     background-color: #66A18A;
     padding: 20px;
     border-radius: 10px;
     width: 300px;
     margin-bottom: 30px;
-    height: auto;
     justify-content: center;
     align-items: center;
-  }
-  
-  .plan-card h2 {
+}
+
+.plan-card h2 {
     margin-top: 0;
-  }
-  
-  .plan-card p {
+}
+
+.plan-card p {
     margin-bottom: 20px;
-  }
-  
-  .plan-card button {
+}
+
+.plan-card button {
     background-color: #EBB755;
     color: white;
     border: none;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-/* About Us*/
+/* About Us Section */
 #aboutus {
-  background-color: #66A18A;
-  padding: 50px 0 0 0;
-  text-align: center;
-  position: relative;
+    background-color: #66A18A;
+    padding: 50px 0 0;
+    text-align: center;
+    position: relative;
 }
 
 .section-title-aboutus {
-  color: white; 
-  font-size: 50px;
-  margin-bottom: 0;
-  position: absolute;
-  top: -40px; 
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 0;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
 .about-us-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
 }
 
 .about-us-item {
-  width: 200px;
-  text-align: center;
-  margin: 10px;
+    width: 200px;
+    text-align: center;
+    margin: 10px;
 }
 
 .about-us-item img {
-  width: 150px; /* Ajusta el ancho según tus necesidades */
-  height: 150px; /* Ajusta la altura según tus necesidades */
-  object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin distorsionarse */
-  border-radius: 50%; /* Mantén el borde redondeado si es necesario */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-/* Contact Us */
+/* Contact Us Section */
 #contactus {
-  background-color: #fff;
-  padding: 50px 0;
-  text-align: center;
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
 }
 
 .contact-us-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
 }
 
 .contact-form {
-  width: 40%;
-  background-color: #66A18A;
-  padding: 20px;
-  border-radius: 10px;
+    width: 40%;
+    background-color: #66A18A;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .contact-form h2 {
-  color: #fff;
-  margin-bottom: 20px;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 .contact-form label {
-  color: #fff;
-  font-size: 14px;
-  display: block;
-  margin-bottom: 5px;
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 90%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 5px;
-  
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
 }
 
 .contact-form button {
-  background-color: #ccc;
-  color: #000;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .contact-image {
-  margin-left: 50px;
+    margin-left: 50px;
 }
 
 .contact-image img {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
 }
 
-
-  /*Footer*/
-
-  .footer{
+/* Footer */
+.footer {
     background-color: #66A18A;
-    color: #fff; 
-    text-align: center; 
-    padding: 10px; 
+    color: #fff;
+    text-align: center;
+    padding: 10px;
     display: flex;
     flex-direction: row;
-      >img{
-        width: auto;
-        height: 120px;
-      }
-  }
-  .img-contact{
-    display: flex; 
     align-items: center;
-  }
+    justify-content: center;
+}
+
+.footer img {
+    width: auto;
+    height: 120px;
+}
+
+.img-contact {
+    display: flex;
+    align-items: center;
+}
